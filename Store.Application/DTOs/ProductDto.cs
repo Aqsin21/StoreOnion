@@ -13,7 +13,7 @@ namespace Store.Application.DTOs
 
         public int CategoryId { get; set; }
 
-        public string CategorieyName { get; set; }
+        public string CategoryName { get; set; }
 
     }
 }

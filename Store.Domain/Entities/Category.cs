@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Store.Domain.Entities
 {
-    public  class Category
+    public  class Category:Entity
     {
-        public int Id { get; set; }
+
 
         public string Name { get; set; }
 

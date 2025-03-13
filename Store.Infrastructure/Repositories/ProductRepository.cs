@@ -1,5 +1,6 @@
 ﻿using Store.Application.Repositories;
 using Store.Domain.Entities;
+using Store.Infrastructure.EfCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,27 +9,12 @@ using System.Threading.Tasks;
 
 namespace Store.Infrastructure.Repositories
 {
-    public class ProductRepository : IProductRepository
+    public class ProductRepository : EfCoreRepository<Product>
     {
-        
-        public void AddProduct(Product product)
+        private readonly AppDbContext context;
+       public ProductRepository(AppDbContext context) :base(context) 
         {
-            throw new NotImplementedException();
-        }
-
-        public List<Product> GetProducts()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void RemoveProduct(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void UpdateProduct(int Id, Product product)
-        {
-            throw new NotImplementedException();
+            this.context = context;
         }
     }
 }
