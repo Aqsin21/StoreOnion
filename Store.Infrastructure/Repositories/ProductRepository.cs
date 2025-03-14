@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Store.Infrastructure.Repositories
 {
-    public class ProductRepository : EfCoreRepository<Product>
+    public class ProductRepository : EfCoreRepository<Product> ,IProductRepository
     {
         private readonly AppDbContext context;
        public ProductRepository(AppDbContext context) :base(context) 
